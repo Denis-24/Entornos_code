@@ -2,6 +2,7 @@ package org.example;
 
 import org.w3c.dom.ls.LSOutput;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Bienvenida {
@@ -9,7 +10,6 @@ public class Bienvenida {
         Scanner teclado = new Scanner(System.in);
 
         int num = 0;
-        String nombre = "";
         boolean control = false;
 
 
@@ -23,21 +23,15 @@ public class Bienvenida {
             }
         }while (control==false);
 
-        for (int i = 1; i <= num; i++) {
+        String nombre[] = new String[num];
+
+        for (int i = 0; i < num; i++) {
             System.out.print("Soy ");
-            nombre = teclado.next();
+            nombre[i] = teclado.next();
         }
 
-        System.out.println(nombre);
-
-
-
-
-
-
-    }
-    static int multiplicacion() {
-
-        return 0;
+        for (int i = 0; i < num; i++) {
+            System.out.println("Hola, " + nombre[i]);
+        }
     }
 }
